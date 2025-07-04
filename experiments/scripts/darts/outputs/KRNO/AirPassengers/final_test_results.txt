@@ -1,0 +1,9 @@
+
+Best exp idx - 55  
+Using the full predictions while sliding window by loss_pred_length
+
+KRNO metrics 
+mse:939.2285766601562, mae:24.045618057250977
+nmse:0.004705512430518866, nmae:0.054758649319410324 
+
+
