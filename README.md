@@ -204,7 +204,7 @@ print('ouput shape:', v.shape)
 # ouput shape: torch.Size([2, 20, 128, 128, 3])
 ```
 
-When `in_grid`,`latent_grid` and `out_grid` are same for training and inference, we can improves the performance of model by enabling the affine maps in the first and last integral layers.  
+When `in_grid`,`latent_grid` and `out_grid` are same for training and inference, we can improve the performance of model by enabling the affine maps in the first and last integral layers by setting `affine_in_first_and_last_integral_tsfm` to True.
 
 ``` python
 
@@ -221,6 +221,7 @@ model = models.KhatriRaoNO_v2.easy_init(
     n_hidden_units=32,      #  #hidden units in each layer of neural network parametrizing component-wise kernel
     n_hidden_layers=3,      # #hidden layers in neural network parametrizing component-wise kernel
     nonlinearity=nn.SiLU(), # Activation function
+    affine_in_first_and_last_integral_tsfm=True, # enable affine maps in the first and last integral layers
 )
 model = model.to(device)
 
